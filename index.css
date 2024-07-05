@@ -1,0 +1,87 @@
+#main{
+    display: flex;
+}
+/* Adjustments for left and right divisions */
+#map-area {
+    width: 60%;
+    padding : 20px;
+    border:1px solid black;
+    margin-right: 5px;
+}
+
+.tooltip{
+    padding: 2px;
+}
+
+#main-form {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+#box-data{
+    border: 2.5px solid black;
+    padding: 10px;
+    align-items: center;
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Styling for map container */
+#map-area {
+    height: 95vh; /* Adjust map height */
+    width: 100%; /* Adjust map width */
+    cursor: default; /* Set normal cursor */
+}
+
+/* Tooltip styling */
+.tooltip {
+    position: absolute;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 5px;
+    z-index: 9999; /* Ensure tooltip appears on top of the map */
+    pointer-events: none; /* Ensure tooltip does not interfere with map click events */
+}
+
+/* Centered content in right division */
+.centered-content {
+    text-align: center;
+    width: 100%;
+}
+
+/* Box styling for right division content */
+.box {
+    border: 2px solid #000; /* Box border */
+    padding: 15px; /* Box padding */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    width: 90%; /* Box width */
+    margin-top: 20px; /* Space above box */
+}
+
+/* View data button styling */
+#viewDataButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: block; /* Make sure button is visible */
+}
+
+#viewDataButton:hover {
+    background-color: #45a049;
+}
+#main2{
+    margin-top: 1cm;
+}
+table, th, td, tr {
+    border: 1px solid black;
+  }

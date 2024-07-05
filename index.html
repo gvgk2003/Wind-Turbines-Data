@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body onload="loadWindTurbines()">
+    <div id="main">
+        <div id="map-area">
+            <!-- map is displayed here-->
+        </div>
+        <div id="main-form">
+            <div id="box-data">
+                <label for="latitudeValue">
+                    Latitude Value:
+                    <input type="text" name="latitudeValue" id="latitudeValue" value="" required readonly/>
+                </label>
+                <br/>
+                <label for="longitudeValue">
+                    Longitude Value:
+                    <input type="text" name="longitudeValue" id="longitudeValue" value="" required readonly/>
+                </label>
+                <button onclick="viewData()" id="viewDataButton">View Data</button>
+            </div>
+        </div>
+    </div>    
+    <div id="main2"></div>
+        <label for="windTurbines">
+            <strong>Wind Turbines:</strong>
+            <select name="windTurbines" id="windTurbines" onchange="changePowerCurve()">
+                <option value="None">None</option>
+                <!--option-->
+            </select>
+        </label><br/><br/>
+        <br/>
+        <label for="category" onchange="changeDistributionCurve()">
+            <strong>Select Category:</strong><br/><br/>
+            <input type="radio" name="category" id="monthly" value="monthly" checked/>Monthly Data <br/>
+            <input type="radio" name="category" id="seasonal" value="seasonal"/>Seasonal Data <br/>
+            <input type="radio" name="category" id="annual" value="annual"/>Annual Data <br/>
+        </label>
+        <br/>
+        <div style="display: flex; justify-content: space-around;">
+            <div id="myChart1"></div>
+            <div id="myChart2"></div>
+        </div>    
+        <div style="display: flex;">
+            <div id="myChart3" style="width: 80%; height: 100%; align-items: center;"></div>
+            <div id="table-container" style="width: 70%; align-items: center; padding-left: 20px;">
+                <table id="data-table" style="width: 100%;">
+                    <thead id="thead1">
+                        <!-- Table header -->
+                    </thead>
+                    <tbody id="data-table-body">
+                        <!-- Populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>  
+    </div>
+    <script src="script.js" type="text/javascript"></script>
+    <script src="script1.js" type="text/javascript"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAL1cSoPwZXivniq9fnNh86U3q0hF-ir5k"></script>
+</body>
+</html>
